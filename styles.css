@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --fontOne:'Space Mono', monospace;
+
+    --strongCyan: hsl(172, 67%, 45%);
+
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --purple: hsl(228, 45%, 44%);
+}
+
+
+body {
+    font-family: var(--fontOne);
+    background-color: var(--lightGrayishCyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color:var(--veryDarkCyan);
+    margin:50px;
+    letter-spacing: 4px;
+    font-size: 3rem;
+}
+
+main {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.inputsContainer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+label {
+    color: var(--darkGrayishCyan);
+    font-size: 1.5rem;
+    margin-bottom: 7.5px;
+
+}
+
+input {
+    background-color: var(--veryLightGrayishCyan);
+    border:none;
+    height: 50px;
+    border-radius: 3px;
+    padding: 5px 15px;
+    color: var(--veryDarkCyan);
+    font-family: var(--fontOne);
+    font-size: 2.4rem;
+    text-align: right;
+
+
+}
+
+.buttonsContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 20px 5%;
+    height: 190px;
+}
+
+#customButton {
+    width: 100%;
+    background-color: var(--veryLightGrayishCyan);
+}
+
+
+button {
+    background-color: var(--veryDarkCyan);
+    border: none;
+    height: 50px;
+    width: 100%;
+    color: var(--white);
+    font-size: 2.4rem;
+    font-family: var(--fontOne);
+    border-radius: 3px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+}
+
+
+.outputsContainer {
+
+    background-color: var(--veryDarkCyan);
+    border-radius: 15px;
+    padding: 20px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.block1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.text1 {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.text2 {
+    color: var(--grayishCyan);
+    font-size: 1.2rem;
+}
+
+.block3 {
+    color: var(--strongCyan);
+    font-size: 3rem;
+}
+
+.resetButton {
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+    border-radius: 5px;
+}
+
+
+.inputIconContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+span {
+
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:50%;
+    translate: 15px -50%;
+
+}
+
+.inputIconNumberOfPeople {
+
+    width: 13px;
+    height: 16px;
+    background-image: url(./images/icon-person.svg);
+}
+
+.inputIconBill {
+
+    width: 11px;
+    height: 17px;
+    background-image: url(./images/icon-dollar.svg);
+}
+
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+.attribution a {
+    color: var(--purple);
+}
