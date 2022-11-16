@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" type="text/css" href="styles.css"/>
-  <link rel="stylesheet" type="text/css" href="desktop.css" media="screen and (min-width:650px)"/>
+  <link rel="stylesheet" type="text/css" href="desktop.css" media="screen and (min-width:600px)"/>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,27 +20,30 @@
     <section class="inputsContainer">
 
       <section class="inputContainer">
-        <label for="bill">Bill</label>
+        <div class="errorContainer">
+          <label for="bill">Bill</label>
+          <div id="billError" class="inactive"></div>
+        </div>
         <div class="inputIconContainer">
           <span class="inputIconBill"></span>
           <input id="bill" type="number" placeholder="0">
 
-
         </div>
         
-
-  
       </section>
   
       <section class="inputContainer">
-        <label>Select Tip %</label>
+        <div class="errorContainer">
+          <label for="customButton">Select Tip %</label>
+          <div id="tipError" class="inactive"></div>
+        </div>
         <div class="buttonsContainer">
 
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
+            <button class="tipButton" value="0.05">5%</button>
+            <button class="tipButton" value="0.1">10%</button>
+            <button class="tipButton" value="0.15">15%</button>
+            <button class="tipButton" value="0.25">25%</button>
+            <button class="tipButton" value="0.5">50%</button>
             <input type="number" id="customButton" placeholder="Custom">
 
         </div>
@@ -49,7 +52,10 @@
       </section>
   
       <section class="inputContainer">
-        <label for="numberOfPeople">Number of People</label>
+        <div class="errorContainer">
+          <label for="numberOfPeople">Number of People</label>
+          <div id="peopleError" class="inactive"></div>
+        </div>
         <div class="inputIconContainer">
           <span class="inputIconNumberOfPeople"></span>
           <input id="numberOfPeople" type="number" placeholder="0">
@@ -66,19 +72,16 @@
           <div class="text1">Tip Amount</div>
           <div class="text2">/ person</div>
         </div>
-        <div class="block3">$4.27</div>
+        <div id="tipAmountContainer" class="block3">$0.00</div>
       </div>
       <div class="block1">
         <div class="block2">
           <div class="text1">Total</div>
           <div class="text2">/ person</div>
         </div>
-        <div class="block3">$32.79</div>
+        <div id="totalContainer" class="block3">$0.00</div>
       </div>
-      <button class="resetButton">RESET</button>
-
-
-      
+      <button id="reset" class="inactiveResetButton">RESET</button>
     </section>
   </main>
 

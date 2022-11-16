@@ -12,6 +12,7 @@ html {
     --fontOne:'Space Mono', monospace;
 
     --strongCyan: hsl(172, 67%, 45%);
+    --cyan:hsl(172, 71%, 61%);
 
     --veryDarkCyan: hsl(183, 100%, 15%);
     --darkGrayishCyan: hsl(186, 14%, 43%);
@@ -19,9 +20,13 @@ html {
     --lightGrayishCyan: hsl(185, 41%, 84%);
     --veryLightGrayishCyan: hsl(189, 41%, 97%);
     --white: hsl(0, 0%, 100%);
+    --softred:rgb(225, 85, 85);
     --purple: hsl(228, 45%, 44%);
 }
 
+.inactive {
+    display: none;
+}
 
 body {
     font-family: var(--fontOne);
@@ -33,7 +38,7 @@ body {
 
 h1 {
     color:var(--veryDarkCyan);
-    margin:50px;
+    margin:45px;
     letter-spacing: 4px;
     font-size: 3rem;
 }
@@ -61,12 +66,16 @@ label {
     color: var(--darkGrayishCyan);
     font-size: 1.5rem;
     margin-bottom: 7.5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
 
+label:hover {
+    color: var(--grayishCyan);
 }
 
 input {
     background-color: var(--veryLightGrayishCyan);
-    border:none;
     height: 50px;
     border-radius: 3px;
     padding: 5px 15px;
@@ -74,8 +83,22 @@ input {
     font-family: var(--fontOne);
     font-size: 2.4rem;
     text-align: right;
+    cursor: pointer;
+    border: 2px solid var(--white);
+}
+
+.errorInput, .errorInput:hover, .errorInput:focus {
+border-color: var(--softred);
+}
 
 
+input:hover {
+    border-color:var(--cyan);
+}
+
+input:focus {
+    border-color:var(--strongCyan);
+    outline-style: none;
 }
 
 .buttonsContainer {
@@ -90,10 +113,11 @@ input {
 #customButton {
     width: 100%;
     background-color: var(--veryLightGrayishCyan);
+    font-size: 2.4rem;
 }
 
 
-button {
+.tipButton {
     background-color: var(--veryDarkCyan);
     border: none;
     height: 50px;
@@ -102,7 +126,34 @@ button {
     font-size: 2.4rem;
     font-family: var(--fontOne);
     border-radius: 3px;
+    cursor: pointer;
 }
+
+.activeTipButton {
+    background-color: var(--strongCyan);
+    border: none;
+    height: 50px;
+    width: 100%;
+    color: var(--veryDarkCyan);
+    font-size: 2.4rem;
+    font-family: var(--fontOne);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
+.tipButton:hover {
+    background-color: var(--cyan);
+    color: var(--veryDarkCyan);
+}
+
+
+.tipButton:focus {
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+
 
 input[type=number]::-webkit-inner-spin-button { 
   -webkit-appearance: none; 
@@ -145,10 +196,43 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 3rem;
 }
 
+.inactiveResetButton {
+    background-color: var(--darkGrayishCyan);
+    color: var(--veryDarkCyan);
+    border-radius: 5px;
+    opacity: 25%;
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    width: 100%;
+    font-size: 2.4rem;
+    font-family: var(--fontOne);
+}
+
+.inactiveResetButton:hover {
+    background-color: var(--darkGrayishCyan);
+}
+
+.inactiveResetButton:focus {
+    background-color: var(--darkGrayishCyan);
+}
+
+
 .resetButton {
     background-color: var(--strongCyan);
     color: var(--veryDarkCyan);
     border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    width: 100%;
+    font-size: 2.4rem;
+    font-family: var(--fontOne);
+    cursor: pointer;
+}
+
+.resetButton:hover {
+    background-color: var(--cyan);
 }
 
 
@@ -184,12 +268,26 @@ span {
     background-image: url(./images/icon-dollar.svg);
 }
 
+.errorContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.error {
+    color: var(--softred);
+    font-size: 1.5rem;
+    margin-bottom: 7.5px;
+    text-align: right;
+}
+
+
 
 .attribution {
     font-size: 1.1rem;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 4px;
+    margin-top: 30px;
+    margin-bottom: 14px;
 }
 .attribution a {
     color: var(--purple);

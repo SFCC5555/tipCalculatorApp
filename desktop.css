@@ -1,0 +1,62 @@
+
+h1 {
+    font-size: 2rem;
+    margin: 30px;
+}
+
+main {
+    width: 75%;
+    max-width: 800px;
+    min-width: 590px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.inputsContainer {
+    width: 48%;
+}
+
+.outputsContainer {
+    width: 48%;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 40px;
+}
+
+.block3 {
+    font-size: 3.5rem;
+}
+
+.block1 {
+    margin-bottom: 35px;
+}
+
+.buttonsContainer {
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    height: 120px;
+}
+
+#customButton {
+    padding: 3px;
+}
+
+#customButton::placeholder {
+    font-size: 2rem;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.inactiveResetButton, .resetButton {
+    position:absolute;
+    width: 86%;
+    bottom: 40px;
+
+}
+
+.attribution {
+    position: absolute;
+    top: 96%;
+    margin-top: 0px;
+}
