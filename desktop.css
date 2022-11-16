@@ -13,6 +13,10 @@ main {
     padding: 20px;
 }
 
+body {
+    height: 100vh;
+}
+
 .inputsContainer {
     width: 48%;
 }
