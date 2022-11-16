@@ -138,6 +138,23 @@ function tipCalculus() {
                 
             }
 
+
+            else if (n=="" || b=="") {
+                tipAmountContainer.innerText="$0.00";
+                totalContainer.innerText="$0.00";
+            }
+            
+            else {
+                tipAmount=(b/n)*tip;
+                total=(b/n)*(parseFloat(tip)+1);
+
+
+                tipAmountContainer.innerText="$"+tipAmount.toFixed(2);
+                totalContainer.innerText="$"+total.toFixed(2);
+
+            } 
+
+
             if (b<0) {
                 tipAmountContainer.innerText="$0.00";
                 totalContainer.innerText="$0.00";
@@ -161,21 +178,6 @@ function tipCalculus() {
                 customButton.classList.add("errorInput");           
 
             }
-
-            else if (n=="" || b=="") {
-                tipAmountContainer.innerText="$0.00";
-                totalContainer.innerText="$0.00";
-            }
-            
-            else {
-                tipAmount=(b/n)*tip;
-                total=(b/n)*(parseFloat(tip)+1);
-
-
-                tipAmountContainer.innerText="$"+tipAmount.toFixed(2);
-                totalContainer.innerText="$"+total.toFixed(2);
-
-            } 
         }
         
         ,1)
